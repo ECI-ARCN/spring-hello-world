@@ -1,0 +1,22 @@
+{
+    "name": "Spring Boot Hello World",
+    // "image": "mcr.microsoft.com/devcontainers/java:17",
+    "dockerFile": "Dockerfile",
+    "features": {
+      "ghcr.io/devcontainers/features/maven:1": {},
+      "ghcr.io/devcontainers/features/heroku-cli:1": {},
+      "ghcr.io/devcontainers/features/java:1": {"version": "17"}
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+            "vscjava.vscode-java-pack",
+            "pivotal.vscode-spring-boot",
+            "vscjava.vscode-maven",
+            "dbaeumer.vscode-eslint",
+            "ms-azuretools.vscode-docker"
+        ]
+      }
+    },
+    "postCreateCommand": "mvn clean install"
+  }
