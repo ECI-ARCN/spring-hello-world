@@ -3,24 +3,17 @@
     "image": "mcr.microsoft.com/devcontainers/java:17",
     "features": {
       "ghcr.io/devcontainers/features/java:1": {"version": "17"},
-      "ghcr.io/devcontainers/features/docker-in-docker:1": {},
-      "ghcr.io/devcontainers/features/maven:1": {},
-      "ghcr.io/devcontainers/features/heroku-cli:1": {}
+      "ghcr.io/devcontainers/features/docker-in-docker:1": {}
     },
     "customizations": {
       "vscode": {
         "extensions": [
             "vscjava.vscode-java-pack",
-            "redhat.vscode-xml",
-            "pivotal.vscode-spring-boot",
-            "vscjava.vscode-maven",
-            "dbaeumer.vscode-eslint",
-            "ms-azuretools.vscode-docker",
-            "editorconfig.editorconfig"
+            "vscjava.vscode-maven"
         ],
         "settings": {"terminal.integrated.shell.linux": "/bin/bash"}
       }
     },
-    "postCreateCommand": "bash .devcontainer/setup.sh",
+    "postCreateCommand": "sudo bash .devcontainer/setup.sh",
     "remoteUser": "vscode"
   }
