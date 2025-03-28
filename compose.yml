@@ -1,0 +1,8 @@
+services:
+  microservice-helloworld:
+    image: idsanchezf/microservice-helloworld
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8090"
